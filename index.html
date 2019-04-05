@@ -3,7 +3,7 @@
     <head>
         <title>Custom Message</title>
     <style>
-        #slut {
+        #lipsmessage {
             text-align: center;
             border: 0px solid white;
             background-color: white;
@@ -67,36 +67,23 @@
         <button id="okbutton" onClick="accept()">Continue</button>
     </div>
     <div id="container">
-        <button align="center" id="slut" onClick="youAreASlut()">Click me lol</button>
+        <button align="center" id="lipsmessage" style="pointer:hover;" onClick="youAreASlut()">Click me</button>
     </div>
         <script>
             
             function youAreASlut() {
-                let slut = document.getElementById("slut");
+                let lips = document.getElementById("lipsmessage");
                 
                 var yourName = prompt("What is your name")
-                
-                if(yourName = ""){
-                    slut.innerHTML = "Please type your name next time, reload this page to try again."
-                }
 
                 var favoriteColor = prompt("What is your favorite color?\nRed\nGreen\nBlue\nPink\nPurple\nBrown");
                 
-                if(favoriteColor = ""){
-                    slut.innerHTML = "Please type your favorite color next time, reload this page to try again."
-                }
-                
                 var victim = prompt("Who would you like to sexually assault\n(Type a name, any name)");
-                
-                if(victim = ""){
-                    slut.innerHTML = "Please type a name next time, reload this page to try again."
-                }
-                
-                slut.innerHTML= yourName + ", " + "look at " + victim + " and suggestively lick your lips.";
-                slut.style.color = favoriteColor;
+                lips.innerHTML= yourName + ", " + "look at " + victim + " and suggestively lick your lips.";
+                lips.style.color = favoriteColor;
                 
                 if(favoriteColor = "pink"){
-                    slut.style.color = "#ed12e5"
+                    lips.style.color = "#ed12e5"
                 }
             }
             
@@ -131,5 +118,7 @@ IF OPENING ON A CHROMEBOOK
 - When on the webpage, follow the prompts at the top of your chrome window.
 
 -->
+
+
 
 
