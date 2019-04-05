@@ -14,7 +14,7 @@
             cursor: pointer;
         }
         
-        .container {
+        #container {
             margin-left: auto;
             margin-right: auto;
             width: 400px;
@@ -24,39 +24,94 @@
             display: none;
         }
         
-        .disclaimer {
+        #disclaimer {
             display: block;
             width: 500px;
+            position: relative;
+            top: 250px;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        #okbutton {
+            border-radius: 15px;
+            border: 1px solid dodgerblue;
+            height: 40px;
+            width: 80px;
+            font-weight: bold;
+            background-color: dodgerblue;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            left: 205px;
+            color: white;
+        }
+        
+        .bigDis {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .exclamation {
+            font-size: 40px;
         }
     </style>
     </head>
     <body>
         
-    <div class="disclaimer">
-        
+    <div id="disclaimer">
+        <img src='warning.png' class="disclaimer" width="100px" height="100px">
+        <p class="disclaimer"><span class="bigDis" id="disclaimerText disclaimer">Disclaimer!</span><br><hr><br>This webpage may contain (somewhat) sexually explicit content, please only continue if you are 18 years of age or have permission from a parent or guardian.</p><br>
+        <button id="okbutton" onClick="accept()">Continue</button>
     </div>
-    <div class="container">
+    <div id="container">
         <button align="center" id="slut" onClick="youAreASlut()">Click me lol</button>
     </div>
         <script>
+            
             function youAreASlut() {
                 let slut = document.getElementById("slut");
                 
                 var yourName = prompt("What is your name")
-
-                var favoriteColor = prompt("What is your favorite color?\nRed\nGreen\n or Blue");
                 
-                var victim = prompt("Who would you like to sexually assault\n(Type a name, any name)")
+                if(yourName = ""){
+                    slut.innerHTML = "Please type your name next time, reload this page to try again."
+                }
+
+                var favoriteColor = prompt("What is your favorite color?\nRed\nGreen\nBlue\nPink\nPurple\nBrown");
+                
+                if(favoriteColor = ""){
+                    slut.innerHTML = "Please type your favorite color next time, reload this page to try again."
+                }
+                
+                var victim = prompt("Who would you like to sexually assault\n(Type a name, any name)");
+                
+                if(victim = ""){
+                    slut.innerHTML = "Please type a name next time, reload this page to try again."
+                }
                 
                 slut.innerHTML= yourName + ", " + "look at " + victim + " and suggestively lick your lips.";
                 slut.style.color = favoriteColor;
+                
+                if(favoriteColor = "pink"){
+                    slut.style.color = "#ed12e5"
+                }
+            }
+            
+        function accept() {
+                document.getElementById("disclaimer").style.display = "none";
+            
+            document.getElementById("container").style.display = "block";
             }
         </script>
     </body>
 </html>
 
 <!--
-
+IF OPENING ON A CHROMEBOOK
+------------
 - Copy and paste all text in your new text editor(ctrl + a, ctrl + c, ctrl + v).
 
 - Press control + s to save, when asked to type the file name, type this: "index.html"
@@ -76,4 +131,5 @@
 - When on the webpage, follow the prompts at the top of your chrome window.
 
 -->
+
 
